@@ -9,17 +9,17 @@ import {
 } from "../controllers/users";
 import { validation } from "../middlewares/validator";
 import { userExist } from "../helpers/db-validators";
-import { jwtValidator } from '../middlewares/jwtvalidator';
+import { jwtValidator } from "../middlewares/jwtvalidator";
 
 const router = Router();
 
 router.get("/", getUsers);
 
-router.get("/:id", [
-  jwtValidator,
-  check("id").custom(userExist), 
-  validation
-], getUser);
+router.get(
+  "/:id",
+  [jwtValidator, check("id").custom(userExist), validation],
+  getUser
+);
 router.post(
   "/",
   [
@@ -30,15 +30,15 @@ router.post(
   ],
   postUser
 );
-router.put("/:id", [
-  jwtValidator,
-  check("id").custom(userExist),
-  validation
-], updateUser);
-router.delete("/:id", [
-  jwtValidator,
-  check("id").custom(userExist), 
-  validation
-], deleteUser);
+router.put(
+  "/:id",
+  [jwtValidator, check("id").custom(userExist), validation],
+  updateUser
+);
+router.delete(
+  "/:id",
+  [jwtValidator, check("id").custom(userExist), validation],
+  deleteUser
+);
 
 export default router;

@@ -16,11 +16,15 @@ const Finance = db.define('finances',{
        
     },
     total: {
-        type: DataTypes.NUMBER
+        type: DataTypes.INTEGER
     },
     description:{
         type: DataTypes.STRING,
         allowNull:false
+    },
+    state:{
+        type: DataTypes.BOOLEAN,
+        defaultValue: true
     }
 
 });

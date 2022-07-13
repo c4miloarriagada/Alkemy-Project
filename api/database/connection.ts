@@ -1,21 +1,20 @@
 import { Sequelize }  from'sequelize'
 import User from '../models/user';
 import Finance from '../models/finance';
+require('dotenv').config();
 
+const DB_PASSWORD:any = process.env.DB_PASSWORD
+const DB_USER:any = process.env.DB_USER
+const DB_NAME:any= process.env.DB_NAME
 
-User.belongsToMany(Finance, {through: 'User_finances'});
-Finance.belongsTo(User);
-
-
-
-
-const db = new Sequelize('alkemy-project', 'postgres', '1234',{
+const db = new Sequelize(DB_NAME , DB_USER, DB_PASSWORD,{
     host: 'localhost',
     dialect: 'postgres',
-    //loggin: false
+    native: false
 
 
 });
+
 
 
 export default db

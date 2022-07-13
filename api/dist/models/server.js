@@ -16,7 +16,9 @@ const express_1 = __importDefault(require("express"));
 const cors_1 = __importDefault(require("cors"));
 const users_1 = __importDefault(require("../routes/users"));
 const login_1 = __importDefault(require("../routes/login"));
+const finance_1 = __importDefault(require("../routes/finance"));
 const connection_1 = __importDefault(require("../database/connection"));
+require("./association");
 class Server {
     constructor() {
         this.paths = {
@@ -33,7 +35,7 @@ class Server {
     dbConnection() {
         return __awaiter(this, void 0, void 0, function* () {
             try {
-                yield connection_1.default.authenticate();
+                yield connection_1.default.sync({ force: false });
                 console.log('===================');
                 console.log('Data Base Connected');
                 console.log('===================');
@@ -51,7 +53,7 @@ class Server {
     routes() {
         this.app.use(this.paths.users, users_1.default);
         this.app.use(this.paths.login, login_1.default);
-        this.app.use(this.paths.finance, login_1.default);
+        this.app.use(this.paths.finance, finance_1.default);
     }
     listen() {
         this.app.listen(this.port, () => {

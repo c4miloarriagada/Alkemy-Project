@@ -3,7 +3,11 @@ import cors from 'cors'
 
 import userRoutes from '../routes/users'
 import login from '../routes/login'
+import financeRoutes from '../routes/finance'
 import db from '../database/connection';
+import './association';
+import User from './user';
+import Finance from './finance';
 
 
 class Server {
@@ -30,7 +34,7 @@ class Server {
 
     async dbConnection () {
         try {
-            await db.authenticate();
+            await db.sync({force: false});
             console.log('===================')
             console.log('Data Base Connected')
             console.log('===================')
@@ -54,7 +58,7 @@ class Server {
     routes(){
         this.app.use(this.paths.users, userRoutes);
         this.app.use(this.paths.login, login);
-        this.app.use(this.paths.finance, login)
+        this.app.use(this.paths.finance, financeRoutes)
     }
 
 

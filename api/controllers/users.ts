@@ -2,6 +2,7 @@ import { Request, Response } from "express";
 import bcryptjs from 'bcryptjs'
 import { jwtGenerator } from '../helpers/jwtgenerator';
 import User from '../models/user';
+import Finance from '../models/finance';
 
 
 export const getUsers = async (req: Request, res: Response) => {
@@ -13,9 +14,16 @@ export const getUsers = async (req: Request, res: Response) => {
 export const getUser = async (req: Request, res: Response) => {
   const { id } = req.params;
 
-  const user = await User.findByPk(id);
-  console.log(user);
-
+  const user = await User.findByPk(id,{
+    include:{
+      model: Finance,
+      limit: 10,
+      where: {
+        state: true
+      }
+    }
+  })
+ 
   if (!user) {
     res.status(404).json(`User ${id} doesnt exist.`);
   } else {

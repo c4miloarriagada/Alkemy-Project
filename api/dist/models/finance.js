@@ -16,11 +16,15 @@ const Finance = connection_1.default.define('finances', {
         }),
     },
     total: {
-        type: sequelize_1.DataTypes.NUMBER
+        type: sequelize_1.DataTypes.INTEGER
     },
     description: {
         type: sequelize_1.DataTypes.STRING,
         allowNull: false
+    },
+    state: {
+        type: sequelize_1.DataTypes.BOOLEAN,
+        defaultValue: true
     }
 });
 exports.default = Finance;
