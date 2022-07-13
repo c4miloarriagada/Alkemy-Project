@@ -3,24 +3,26 @@ import db from '../database/connection';
 
 
 
-const User = db.define('users',{
+const Finance = db.define('finances',{
 
     name: {
         type: DataTypes.STRING,
         allowNull:false
     },
-    email: {
-        type: DataTypes.STRING,
-        unique: true
+    type: {
+        type: DataTypes.ENUM({
+            values: ['sum' , 'rest']
+        }),
+       
     },
-    state: {
-        type: DataTypes.BOOLEAN
+    total: {
+        type: DataTypes.NUMBER
     },
-    password:{
+    description:{
         type: DataTypes.STRING,
         allowNull:false
     }
 
 });
 
-export default User;
+export default Finance;

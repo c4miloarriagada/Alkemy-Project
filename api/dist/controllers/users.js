@@ -13,6 +13,8 @@ var __importDefault = (this && this.__importDefault) || function (mod) {
 };
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.deleteUser = exports.updateUser = exports.postUser = exports.getUser = exports.getUsers = void 0;
+const bcryptjs_1 = __importDefault(require("bcryptjs"));
+const jwtgenerator_1 = require("../helpers/jwtgenerator");
 const user_1 = __importDefault(require("../models/user"));
 const getUsers = (req, res) => __awaiter(void 0, void 0, void 0, function* () {
     const users = yield user_1.default.findAll();
@@ -32,19 +34,22 @@ const getUser = (req, res) => __awaiter(void 0, void 0, void 0, function* () {
 });
 exports.getUser = getUser;
 const postUser = (req, res) => __awaiter(void 0, void 0, void 0, function* () {
-    const { body } = req;
+    const { email, name, password } = req.body;
     try {
-        const email = yield user_1.default.findOne({
+        const findEmail = yield user_1.default.findOne({
             where: {
-                email: body.email,
+                email: email,
             },
         });
-        if (email) {
-            return res.status(400).json(`E-mail already exist ${body.email}`);
+        if (findEmail) {
+            return res.status(400).json(`E-mail already exist ${email}`);
         }
-        const user = new user_1.default(body);
+        const user = new user_1.default({ name, email, password, state: true });
+        const salt = bcryptjs_1.default.genSaltSync();
+        user.password = bcryptjs_1.default.hashSync(password, salt);
         yield user.save();
-        res.status(201).json(user);
+        const token = yield (0, jwtgenerator_1.jwtGenerator)(user.id);
+        res.status(201).json({ user, token });
     }
     catch (error) {
         console.log(error);
@@ -54,13 +59,13 @@ const postUser = (req, res) => __awaiter(void 0, void 0, void 0, function* () {
 exports.postUser = postUser;
 const updateUser = (req, res) => __awaiter(void 0, void 0, void 0, function* () {
     const { id } = req.params;
-    const { body } = req;
+    const { email, name, password } = req.body;
     try {
         const user = yield user_1.default.findByPk(id);
         if (!user) {
             return res.status(404).json(`User with id ${id} doesnt exist`);
         }
-        yield user.update(body);
+        yield user.update({ email, name, password });
         res.status(201).json(user);
     }
     catch (error) {

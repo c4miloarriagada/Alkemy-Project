@@ -5,22 +5,23 @@ var __importDefault = (this && this.__importDefault) || function (mod) {
 Object.defineProperty(exports, "__esModule", { value: true });
 const sequelize_1 = require("sequelize");
 const connection_1 = __importDefault(require("../database/connection"));
-const User = connection_1.default.define('users', {
+const Finance = connection_1.default.define('finances', {
     name: {
         type: sequelize_1.DataTypes.STRING,
         allowNull: false
     },
-    email: {
-        type: sequelize_1.DataTypes.STRING,
-        unique: true
+    type: {
+        type: sequelize_1.DataTypes.ENUM({
+            values: ['sum', 'rest']
+        }),
     },
-    state: {
-        type: sequelize_1.DataTypes.BOOLEAN
+    total: {
+        type: sequelize_1.DataTypes.NUMBER
     },
-    password: {
+    description: {
         type: sequelize_1.DataTypes.STRING,
         allowNull: false
     }
 });
-exports.default = User;
-//# sourceMappingURL=user.js.map
+exports.default = Finance;
+//# sourceMappingURL=finance.js.map
