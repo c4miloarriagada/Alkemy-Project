@@ -28,6 +28,7 @@ const getUser = (req, res) => __awaiter(void 0, void 0, void 0, function* () {
         include: {
             model: finance_1.default,
             limit: 10,
+            order: [['createdAt', 'DESC']],
             where: {
                 state: true
             }

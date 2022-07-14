@@ -9,7 +9,28 @@ export const getFinances = async(req:Request, res: Response) =>{
     res.status(201).json(finances)
 }
 
+export const getFinancesId = async(req:Request, res: Response)=>{
+    const { id } = req.params
+    try{
+        const finance = await Finance.findByPk(id)
 
+        if(!finance){
+            return res.status(400).json(`Register with id ${id} doesnt exist`)
+        }
+            
+        
+        return res.status(201).json(finance);
+        
+        
+    }catch(err){
+        console.log(err)
+        return res.status(400).json(`Contact with the administrator`)
+    }
+
+
+
+
+}
 
 export const postFinance = async(req: Request, res: Response) => {
 

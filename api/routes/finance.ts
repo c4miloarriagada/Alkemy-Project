@@ -8,10 +8,12 @@ import {
 } from "../controllers/finance";
 import { validation } from "../middlewares/validator";
 import { jwtValidator } from "../middlewares/jwtvalidator";
+import { getFinancesId } from "../controllers/finance";
 
 const router = Router();
 
 router.get("/", getFinances);
+router.get("/:id", [jwtValidator, validation], getFinancesId);
 router.post(
   "/",
   [

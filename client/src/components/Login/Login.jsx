@@ -16,7 +16,7 @@ export const Login=()=>{
         try{
             await authService.signup(email, password).then(
                 ()=>{
-                    navigate('/');
+                    navigate('/home');
                    
                 },
                 (error)=>{

@@ -18,6 +18,7 @@ export const getUser = async (req: Request, res: Response) => {
     include:{
       model: Finance,
       limit: 10,
+      order:[ ['createdAt', 'DESC'] ],
       where: {
         state: true
       }

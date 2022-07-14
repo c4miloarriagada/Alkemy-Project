@@ -12,7 +12,7 @@ var __importDefault = (this && this.__importDefault) || function (mod) {
     return (mod && mod.__esModule) ? mod : { "default": mod };
 };
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.deleteFinance = exports.financeEdit = exports.postFinance = exports.getFinances = void 0;
+exports.deleteFinance = exports.financeEdit = exports.postFinance = exports.getFinancesId = exports.getFinances = void 0;
 const finance_1 = __importDefault(require("../models/finance"));
 const user_1 = __importDefault(require("../models/user"));
 const getFinances = (req, res) => __awaiter(void 0, void 0, void 0, function* () {
@@ -20,6 +20,21 @@ const getFinances = (req, res) => __awaiter(void 0, void 0, void 0, function* ()
     res.status(201).json(finances);
 });
 exports.getFinances = getFinances;
+const getFinancesId = (req, res) => __awaiter(void 0, void 0, void 0, function* () {
+    const { id } = req.params;
+    try {
+        const finance = yield finance_1.default.findByPk(id);
+        if (!finance) {
+            return res.status(400).json(`Register with id ${id} doesnt exist`);
+        }
+        return res.status(201).json(finance);
+    }
+    catch (err) {
+        console.log(err);
+        return res.status(400).json(`Contact with the administrator`);
+    }
+});
+exports.getFinancesId = getFinancesId;
 const postFinance = (req, res) => __awaiter(void 0, void 0, void 0, function* () {
     const { name, type, total, description, id } = req.body;
     try {
