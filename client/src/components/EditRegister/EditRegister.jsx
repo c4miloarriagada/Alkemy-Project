@@ -35,7 +35,6 @@ export const EditRegister = () => {
   }, [register]);
 
   const handleOnchange = (e) => {
-    console.log(e.target.value)
     setInput({
       ...input,
       [e.target.name]: e.target.value,
@@ -115,8 +114,8 @@ export const EditRegister = () => {
         </Form>
         <Form.Select name='type'onChange={(e)=>handleOnchange(e)} aria-label="Default select example">
           <option>Type</option>
-          <option  value={'sum'}>Deposited</option>
-          <option   value={'rest'}>Withdraw</option>
+          <option value={'sum'}>Deposited</option>
+          <option value={'rest'}>Withdraw</option>
         </Form.Select>
         <br/>
         <Button variant="success" type='submit'>Success</Button>

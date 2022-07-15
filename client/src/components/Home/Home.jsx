@@ -57,11 +57,14 @@ export const Home = () => {
   };
 
   return (
-    <div>
+    <div className="text-center">
       <NavBar />
-      <h1 class="text-center mt-5">Welcome to management of finances app 💰</h1>
-      <div class="container mt-4">
-        <Table striped bordered hover variant="dark">
+      <h1 class="mt-5">Welcome to management of finances app 💰</h1>
+      <div  class="container mt-4">
+      <Button  as={Link} variant="success" to={`/add`} className='mt-3'  size="lg">
+          Add Register 
+        </Button>
+        <Table className="mt-4" striped bordered hover variant="dark">
           <thead>
             <tr>
               <th>#</th>

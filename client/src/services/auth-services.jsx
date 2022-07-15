@@ -17,10 +17,11 @@ const signup = (email, password)=>{
 
 
 
-const register = (name, password, email)=>{
+const register = (data)=>{
+    console.log(data)
     return axios
         .post("http://localhost:8000/api/users/",{
-           name, email, password
+           data
         })
         .then((response)=>{
             if(response.data.token){
