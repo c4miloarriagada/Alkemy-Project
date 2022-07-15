@@ -1,9 +1,10 @@
 import axios from 'axios'
 import authHeader from '../../services/auth-header'
 
-export const GET_REGISTER = 'GET_REGISTER'
-export const DELETE_REGISTER = 'DELETE_REGISTER'
-export const EDIT_REGISTER = 'EDIT_REGISTER'
+export const GET_REGISTER = 'GET_REGISTER';
+export const DELETE_REGISTER = 'DELETE_REGISTER';
+export const EDIT_REGISTER = 'EDIT_REGISTER';
+export const PUT_REGISTER = 'PUT_REGISTER';
 
 
 
@@ -35,6 +36,17 @@ export const editRegister = (id) => {
         return axios.get(`http://localhost:8000/api/finance/edit/${id}`, { headers: authHeader() })
         .then(response =>{
             dispatch({type: EDIT_REGISTER, payload: response.data})
+        })
+        .catch(err => console.log(err))
+    }
+}
+
+
+export const putRegister = (id, data) => {
+    return async function(dispatch){
+        return axios.put(`http://localhost:8000/api/finance/${id}`,data, { headers: authHeader() })
+        .then(response =>{
+            dispatch({type: PUT_REGISTER, payload: response.data})
         })
         .catch(err => console.log(err))
     }

@@ -1,4 +1,4 @@
-import { GET_REGISTER,  EDIT_REGISTER } from "../actions/actions";
+import { GET_REGISTER,  EDIT_REGISTER, PUT_REGISTER } from "../actions/actions";
 
 
 
@@ -23,7 +23,12 @@ const rootReducer = (state = initialState, action) => {
         return{
             ...state,
             register: action.payload
-        }   
+        } 
+       case PUT_REGISTER:
+        return{
+            ...state,
+            register: action.payload
+        } 
         
         default:
             return {...state}
