@@ -13,17 +13,17 @@ export const getUsers = async (req: Request, res: Response) => {
 
 export const getUser = async (req: Request, res: Response) => {
   const { id } = req.params;
-
+ 
   const user = await User.findByPk(id,{
     include:{
+      order:[ ['createAt', 'DESC'] ],
       model: Finance,
-      limit: 10,
-      order:[ ['createdAt', 'DESC'] ],
       where: {
-        state: true
+       state: true
       }
-    }
+     }
   })
+ 
  
   if (!user) {
     res.status(404).json(`User ${id} doesnt exist.`);

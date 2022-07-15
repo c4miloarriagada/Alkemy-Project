@@ -26,9 +26,8 @@ const getUser = (req, res) => __awaiter(void 0, void 0, void 0, function* () {
     const { id } = req.params;
     const user = yield user_1.default.findByPk(id, {
         include: {
+            order: [['createAt', 'DESC']],
             model: finance_1.default,
-            limit: 10,
-            order: [['createdAt', 'DESC']],
             where: {
                 state: true
             }

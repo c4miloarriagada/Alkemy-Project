@@ -1,38 +1,36 @@
 import React from "react";
-import Nav from 'react-bootstrap/Nav';
-import Navbar from 'react-bootstrap/Navbar';
-import { Link } from "react-router-dom";
-import NavDropdown from 'react-bootstrap/NavDropdown';
-import Container from 'react-bootstrap/Container';
+import {Navbar, Button, Nav} from 'react-bootstrap/';
+import { Link, useNavigate } from "react-router-dom";
+import authService from "../../services/auth-services";
+
+
 
 export const NavBar = () => {
     const user = JSON.parse(localStorage.getItem("user"));
+    const navigate = useNavigate()
+    
+    
+    const logOut = ()=>{
+      authService.logout();
+      navigate('/');
+      window.location.reload();
+    }
 
 
   return (
     <div>
-      <Navbar bg="dark" expand="lg">
-        <Navbar.Brand href="#home">React-Bootstrap</Navbar.Brand>
+      <Navbar bg="secondary" expand="lg">
+        <Navbar.Brand >{user?.user.name} Balances</Navbar.Brand>
 
         <Navbar.Toggle aria-controls="basic-navbar-nav" />
         <Navbar.Collapse id="basic-navbar-nav">
           <Nav className="me-auto">
-            <Nav.Link as={Link} to={'/login'}>Home</Nav.Link>
-            <Nav.Link href="#link">Link</Nav.Link>
-            <NavDropdown title="Dropdown" id="basic-nav-dropdown">
-              <NavDropdown.Item href="#action/3.1">Action</NavDropdown.Item>
-              <NavDropdown.Item href="#action/3.2">
-                Another action
-              </NavDropdown.Item>
-              <NavDropdown.Item href="#action/3.3">Something</NavDropdown.Item>
-              <NavDropdown.Divider />
-              <NavDropdown.Item href="#action/3.4">
-                Separated link
-              </NavDropdown.Item>
-            </NavDropdown>
+            <Button as={Link} variant="secondary" to={'/home'}>Home</Button>
+            <Button onClick={logOut} variant="secondary" size="sm">
+            Logout
+          </Button>
           </Nav>
-        </Navbar.Collapse>
-      
+        </Navbar.Collapse>   
     </Navbar>
     </div>
   );
