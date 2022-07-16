@@ -1,6 +1,6 @@
 .App{
   font-family: 'Raleway';
-  height: 100vh;
+  height: 100;
   background: rgb(210,210,210);
   background: linear-gradient(0deg, rgba(210,210,210,1) 0%, rgba(252,243,224,1) 100%);
 }

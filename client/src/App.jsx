@@ -5,6 +5,8 @@ import { Register } from './components/Register/Register'
 import { Home } from './components/Home/Home'
 import { EditRegister } from './components/EditRegister/EditRegister'
 import { AddRegister } from './components/AddRegister/AddRegister'
+import { PrivateRoutes } from './components/PrivateRoutes/PrivateRoutes'
+
 
 import './App.css'
 
@@ -14,16 +16,20 @@ function App() {
   return(
     <div>
       <div className='App'>
-        <BrowserRouter>
+      
           <Routes>
             <Route path='/' element={<LandingPage/>}/>
             <Route path='/login' element={<Login/>}/>
             <Route path='/register' element={<Register/>}/>
-            <Route path='/home' element={<Home/>}/>
+            <Route path='/home' element={
+              <PrivateRoutes>
+                <Home/>
+              </PrivateRoutes>
+           }/>
             <Route path='/edit/:id' element={<EditRegister/>}/>
             <Route path='/add' element={<AddRegister/>}/>
           </Routes>
-        </BrowserRouter>
+    
       </div>
     </div>
   )

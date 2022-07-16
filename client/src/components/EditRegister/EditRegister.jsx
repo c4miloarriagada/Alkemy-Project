@@ -100,7 +100,7 @@ export const EditRegister = () => {
               onChange={handleOnchange}
             />
           </Form.Group>
-          <Form.Group className="mb-3" controlId="exampleForm.ControlInput1">
+          <Form.Group className="mb-3" controlId="exampleForm.ControlInput2">
             <Form.Label>Amount 💸</Form.Label>
             <Form.Control
               type="number"
