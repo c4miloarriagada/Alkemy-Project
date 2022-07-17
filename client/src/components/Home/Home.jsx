@@ -1,5 +1,5 @@
 import React from "react";
-import { useState, useEffect } from "react";
+import {  useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { Link } from "react-router-dom";
 import { deleteRegister, getRegister } from "../../redux/actions/actions";
@@ -47,7 +47,7 @@ export const Home = () => {
       confirmButtonText: "Yes, delete it!",
     }).then((result) => {
       if (result.isConfirmed) {
-        Swal.fire("Deleted!", "Your file has been deleted.", "success").then(
+        Swal.fire("Deleted!", "Your register has been deleted.", "success").then(
           () => {
             location.reload();
           }

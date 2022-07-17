@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import authService from "../../services/auth-services";
 
-import { Container, Form, Button, Badge } from "react-bootstrap";
+import { Container, Form, Button } from "react-bootstrap";
 
 import Swal from "sweetalert2";
 
