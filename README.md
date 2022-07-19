@@ -16,16 +16,7 @@ FullStack Project for Alkemy.org
       <img align="center" src="https://res.cloudinary.com/dwtkwakbc/image/upload/v1658269355/Alkemy-project/registerFinance_ol7cjk.png"/>
 </p>
 <p align='center'>
-<<<<<<< HEAD
-      <img align="center" src="https://res.cloudinary.com/dwtkwakbc/image/upload/v1658266533/Alkemy-project/homeFinance_jid6yi.png"/>
-     
-</p>
-
-<p align='center'>
-      <img align="center" src='https://res.cloudinary.com/dwtkwakbc/image/upload/v1658266533/Alkemy-project/homeFill_b5fdma.png'/>
-=======
       <img align="center" src="https://res.cloudinary.com/dwtkwakbc/image/upload/v1658269371/Alkemy-project/homeFinance_eygva1.png"/>
->>>>>>> e9505360bb3dc6c15d4b4e2a14394b5c442111a9
 </p>
 <p align='center'>
       <img align="center" src='https://res.cloudinary.com/dwtkwakbc/image/upload/v1658268165/Alkemy-project/homeFill_b5fdma.png'/>
@@ -50,3 +41,4 @@ FullStack Project for Alkemy.org
  <th><img align="center" alt="redux" width="40" height="40" src="https://user-images.githubusercontent.com/86882630/173864516-ee3498ac-9733-4e0e-8f1c-c0c2311fe73f.svg"/></th>
  <th><img align="center"alt="bootsrap" width="40" height="40" src="https://res.cloudinary.com/dwtkwakbc/image/upload/v1657049094/logosportfolio/Bootstrap_logo_jm6l9t.svg"/></th>
 </tr>
+
