@@ -70,10 +70,10 @@ export const getFinancesId = async(req:Request, res: Response)=>{
 export const postFinance = async(req: Request, res: Response) => {
 
     
-    const { name, type , total , description, id } = req.body
+    const { name, type , date ,total , description, id } = req.body
     
     try{
-        const finance =  await Finance.create({ name, type, total, description })
+        const finance =  await Finance.create({ name, type, total, date ,description })
         
         const user = await User.findByPk(id)
 
@@ -93,7 +93,7 @@ export const postFinance = async(req: Request, res: Response) => {
 export const financeEdit = async(req:Request, res: Response) => {
 
     const { id } = req.params
-    const { name , type, total, description } = req.body
+    const { name , type, total, description, date } = req.body
     
     try{
         const finance = await Finance.findByPk(id);
@@ -101,7 +101,7 @@ export const financeEdit = async(req:Request, res: Response) => {
             return res.status(404).json(`Finance doesnt with ${id} exist`)
         }
 
-        await finance.update({name, type, total, description});
+        await finance.update({name, type, total, description, date});
 
         res.status(201).json(finance)
 

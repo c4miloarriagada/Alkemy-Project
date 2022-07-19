@@ -1,6 +1,10 @@
 .App{
+  background-size: cover;
   font-family: 'Raleway';
-  height: 100;
+  height: auto;
   background: rgb(210,210,210);
   background: linear-gradient(0deg, rgba(210,210,210,1) 0%, rgba(252,243,224,1) 100%);
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  background-position: center center;
 }

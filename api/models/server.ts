@@ -6,8 +6,7 @@ import login from '../routes/login'
 import financeRoutes from '../routes/finance'
 import db from '../database/connection';
 import './association';
-import User from './user';
-import Finance from './finance';
+
 
 
 class Server {

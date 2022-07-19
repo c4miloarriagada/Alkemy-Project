@@ -25,6 +25,10 @@ const Finance = connection_1.default.define('finances', {
     state: {
         type: sequelize_1.DataTypes.BOOLEAN,
         defaultValue: true
+    },
+    date: {
+        type: sequelize_1.DataTypes.DATEONLY,
+        allowNull: false
     }
 });
 exports.default = Finance;

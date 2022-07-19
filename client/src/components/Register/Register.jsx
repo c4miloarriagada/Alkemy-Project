@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import authService from "../../services/auth-services";
 
-import { Container, Form, Button } from "react-bootstrap";
+import { Container, Form, Button, Card } from "react-bootstrap";
 
 import Swal from "sweetalert2";
 
@@ -53,13 +53,16 @@ export const Register = () => {
   };
 
   return (
-    <div>
-      <h1 className="text-center">Register</h1>
-      <Container>
-        <Form onSubmit={handleRegister}>
-          <Form className="mt-5">
+    <div className="background">
+      <h1 className="text-center display-3 font-weight-bold">Register</h1>
+      <Container className="mt-5 d-flex justify-content-md-center " style={{ width: '25rem' }}>
+      <Container className="mt-5">
+        <Card className="mt-5" bg='dark'>
+          <Card.Body>
+          <Form onSubmit={handleRegister}>
+          <Form >
             <Form.Group className="mb-3" controlId="exampleForm.ControlInput1">
-              <Form.Label>Name</Form.Label>
+              <Form.Label className="text-white">Name</Form.Label>
               <Form.Control
                 type="text"
                 placeholder="Name"
@@ -70,7 +73,7 @@ export const Register = () => {
               />
             </Form.Group>
             <Form.Group className="mb-3" controlId="exampleForm.ControlInput2">
-              <Form.Label>Email</Form.Label>
+              <Form.Label className="text-white">Email</Form.Label>
               <Form.Control
                 type="text"
                 placeholder="email@email.com"
@@ -82,7 +85,7 @@ export const Register = () => {
             </Form.Group>
           </Form>
           <Form.Group className="mb-3" controlId="exampleForm.ControlInput3">
-            <Form.Label>Password</Form.Label>
+            <Form.Label className="text-white">Password</Form.Label>
             <Form.Control
               type="password"
               name="password"
@@ -93,10 +96,14 @@ export const Register = () => {
             />
           </Form.Group>
 
-          <Button variant="success" type="submit">
-            Success
+          <Button variant="success" type="submit" className="float-right">
+            Submit
           </Button>
         </Form>
+          </Card.Body>
+        </Card>
+      
+      </Container>
       </Container>
     </div>
   );

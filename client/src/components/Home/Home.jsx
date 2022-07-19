@@ -6,7 +6,8 @@ import { deleteRegister, getRegister } from "../../redux/actions/actions";
 import { NavBar } from "../NavBar/NavBar";
 
 import Swal from "sweetalert2";
-import { Button, Table, Alert } from "react-bootstrap";
+import { Button, Table, Alert, Container } from "react-bootstrap";
+import "./Home.css";
 
 export const Home = () => {
   const dispatch = useDispatch();
@@ -61,8 +62,8 @@ export const Home = () => {
   return (
     <div className="text-center">
       <NavBar />
-      <h1 class="mt-5">Welcome to management of finances app 💰</h1>
-      <div class="container mt-4">
+      <h1 class="mt-5" className='font-weight-bold display-4'>Welcome to management of finances app 💰</h1>
+      <div class="container mt-1">
         <Button
           as={Link}
           variant="success"
@@ -72,18 +73,23 @@ export const Home = () => {
         >
           Add Register
         </Button>
+      
         {!registers.length ? (
-          <Alert className="mt-5" variant="warning">
-            Please add some register 💸
+          <Container className='backgroundColor' >
+            
+          <Alert  className="mt-5" variant="info">
+          Hi! {user.user.name}  please add some register 💸
           </Alert>
+          </Container>
         ) : (
-          <>
-            <Table className="mt-4" striped bordered hover variant="dark">
+          <Container >
+            <Table  className="mt-4" responsive striped bordered hover size='md' variant="dark">
               <thead>
                 <tr>
                   <th>#</th>
                   <th>Register</th>
                   <th>Description</th>
+                  <th>Date</th>
                   <th>Type</th>
                   <th>Amount</th>
                   <th></th>
@@ -96,6 +102,7 @@ export const Home = () => {
                     <th scope="row">{index + 1}</th>
                     <td>{e.name}</td>
                     <td>{e.description}</td>
+                    <td>{e.date}</td>
                     <td>{e.type === "sum" ? "Deposited" : "Withdraw"}</td>
                     <td>{e.total}</td>
                     <td>
@@ -120,32 +127,32 @@ export const Home = () => {
                 </tbody>
               ))}
             </Table>
-            <Table>
-              <td>
-                {sum - rest < 0 ? (
-                  <td class="p-2 mr-2 bg-danger text-white">
-                    Total = $ {sum - rest}
-                  </td>
-                ) : (
-                  <td class="p-2 mb-2 bg-success text-white">
-                    Total = $ {sum - rest}
-                  </td>
-                )}
-              </td>
-
+            <Table size="sm" responsive   hover>
               <td>
                 {totalSum - totalRest < 0 ? (
-                  <td class="p-2 mb-2 bg-danger text-white">
-                    Total Historical Balance = $ {totalSum - totalRest}{" "}
+                  <td class="p-2  bg-danger text-white float-right">
+                    Total Historical Balance =  ${totalSum - totalRest}{" "}
                   </td>
                 ) : (
-                  <td class="p-2 mb-2 bg-success text-white">
-                    Total Historical Balance = $ {totalSum - totalRest}{" "}
+                  <td class="p-2 bg-success text-white float-right">
+                    Total Historical Balance =  ${totalSum - totalRest}{" "}
                   </td>
                 )}{" "}
               </td>
+              <br/>
+              <td>
+                {sum - rest < 0 ? (
+                  <td class="p-2  bg-danger text-white float-right">
+                    Total Table = $ {sum - rest}
+                  </td>
+                ) : (
+                  <td class="p-2  bg-success text-white float-right">
+                    Total Table = ${sum - rest}
+                  </td>
+                )}
+              </td>
             </Table>
-          </>
+          </Container>
         )}
       </div>
     </div>

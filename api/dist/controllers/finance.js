@@ -60,9 +60,9 @@ const getFinancesId = (req, res) => __awaiter(void 0, void 0, void 0, function* 
 });
 exports.getFinancesId = getFinancesId;
 const postFinance = (req, res) => __awaiter(void 0, void 0, void 0, function* () {
-    const { name, type, total, description, id } = req.body;
+    const { name, type, date, total, description, id } = req.body;
     try {
-        const finance = yield finance_1.default.create({ name, type, total, description });
+        const finance = yield finance_1.default.create({ name, type, total, date, description });
         const user = yield user_1.default.findByPk(id);
         yield user.addFinance(finance);
         res.status(201).json('Register created succesfully');
@@ -75,13 +75,13 @@ const postFinance = (req, res) => __awaiter(void 0, void 0, void 0, function* ()
 exports.postFinance = postFinance;
 const financeEdit = (req, res) => __awaiter(void 0, void 0, void 0, function* () {
     const { id } = req.params;
-    const { name, type, total, description } = req.body;
+    const { name, type, total, description, date } = req.body;
     try {
         const finance = yield finance_1.default.findByPk(id);
         if (!finance) {
             return res.status(404).json(`Finance doesnt with ${id} exist`);
         }
-        yield finance.update({ name, type, total, description });
+        yield finance.update({ name, type, total, description, date });
         res.status(201).json(finance);
     }
     catch (error) {

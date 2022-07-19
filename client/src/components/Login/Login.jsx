@@ -2,7 +2,7 @@ import React, {useState} from "react";
 import { useNavigate } from "react-router-dom";
 import authService from '../../services/auth-services';
 
-import { Container, Form, Button } from "react-bootstrap";
+import { Container, Form, Button, Card } from "react-bootstrap";
 
 import Swal from "sweetalert2";
 
@@ -55,7 +55,6 @@ export const Login=()=>{
         }catch(err){
             console.log(err);
         }
-    
     }
    
     
@@ -68,19 +67,22 @@ export const Login=()=>{
 
 
     return (
-      <div>
-        <h1 className="text-center">
+      <div className="background ">
+        <h1 className="text-center font-weight-bold  display-3">
           Login
         </h1>
-        <Container>
-        <Form onSubmit= { handleLogin }>  
-          <Form.Group className="mb-3" controlId="exampleForm.ControlInput2">
-            <Form.Label>Email</Form.Label>
+        <Container className="mt-5 d-flex justify-content-md-center">
+          <Container  className="mt-5 " style={{ width: '25rem' }}>
+          <Card className="mt-5" bg='dark' >
+          <Card.Body>
+          <Form onSubmit= { handleLogin }>  
+          <Form.Group className="mb-3 " controlId="exampleForm.ControlInput2" >
+            <Form.Label  className="text-white">Email</Form.Label>
             <Form.Control  type="text" placeholder="email@email.com" name='email' autoComplete="off" value={input.email} onChange={handleOnchange}/>
           </Form.Group>
 
           <Form.Group className="mb-3" controlId="exampleForm.ControlInput3">
-            <Form.Label>Password</Form.Label>
+            <Form.Label className="text-white">Password</Form.Label>
             <Form.Control type="password"  name='password' placeholder='•••••••••' autoComplete="off" value={input.password} onChange={handleOnchange}/>
         
           </Form.Group>
@@ -89,6 +91,10 @@ export const Login=()=>{
           Success
         </Button>
         </Form>
+          </Card.Body>
+        </Card>
+        
+          </Container>
         </Container>
       </div>
       );

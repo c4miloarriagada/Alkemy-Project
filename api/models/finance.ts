@@ -25,6 +25,10 @@ const Finance = db.define('finances',{
     state:{
         type: DataTypes.BOOLEAN,
         defaultValue: true
+    },
+    date:{
+        type: DataTypes.DATEONLY,
+        allowNull: false
     }
 
 });

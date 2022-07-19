@@ -20,13 +20,13 @@ export const NavBar = () => {
   return (
     <div>
       <Navbar bg="secondary" expand="lg">
-        <Navbar.Brand >{user?.user.name} Balances</Navbar.Brand>
+        <Navbar.Brand className="text-white">{user?.user.name} Balances</Navbar.Brand>
 
         <Navbar.Toggle aria-controls="basic-navbar-nav" />
         <Navbar.Collapse id="basic-navbar-nav">
           <Nav className="me-auto">
             <Button as={Link} variant="secondary" to={'/home'}>Home</Button>
-            <Button onClick={logOut} variant="secondary" size="sm">
+            <Button onClick={logOut} variant="secondary" size="sm" className="float-right">
             Logout
           </Button>
           </Nav>
