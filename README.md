@@ -26,7 +26,7 @@ FullStack Project for Alkemy.org
       <img align="center" src="https://res.cloudinary.com/dwtkwakbc/image/upload/v1658268283/Alkemy-project/addRegisterFinance_cltqbn.png"/>
 </p>
 <p align='center'>
-      <img align="center"https://res.cloudinary.com/dwtkwakbc/image/upload/v1658266533/Alkemy-project/ediRegisterFinance_r5rpzi.png"/></p>
+      <img align="center" src='https://res.cloudinary.com/dwtkwakbc/image/upload/v1658266533/Alkemy-project/ediRegisterFinance_r5rpzi.png'/></p>
       
 
   
