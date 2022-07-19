@@ -5,7 +5,7 @@ FullStack Project for Alkemy.org
 
 
 ```
-<a  href='https://www.alkemy.org/' target="_blank">Alkemy.org</a>
+<a align='center' href='https://www.alkemy.org/' target="_blank">Alkemy.org</a>
 
 <h1 align='center'>Management Finance Aplication 💰 </h1>
 <p>Back End  --- APIRESTFUL built on TypeScript, Node JS , Express JS, Postgres , JWT  </p>
@@ -21,7 +21,7 @@ FullStack Project for Alkemy.org
 </p>
 
 <p align='center'>
-      <img align="center" src='https://res.cloudinary.com/dwtkwakbc/image/upload/v1658266533/Alkemy-project/homeFill_b5fdma.png'/>
+      <img align="center" src='https://res.cloudinary.com/dwtkwakbc/image/upload/v1658268165/Alkemy-project/homeFill_b5fdma.png'/>
 </p>
 <p align='center'>
       <img align="center" src="https://res.cloudinary.com/dwtkwakbc/image/upload/v1658266533/Alkemy-project/addRegisterFinance_cltqbn.png"/>
