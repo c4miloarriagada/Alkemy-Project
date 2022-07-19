@@ -59,7 +59,7 @@ export const Home = () => {
     });
   };
 
-  console.log(registers)
+
 
 
   return (
