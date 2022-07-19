@@ -68,11 +68,11 @@ export const EditRegister = () => {
   };
 
   return (
-    <div className="background">
+    <div className="background ">
       <NavBar />
-      <h1 className="mt-5 text-center font-weight-bold">Edit Register 🖊</h1>
+      <h1 className="mt-5 h1 text-center">Edit Register 📝</h1>
       <Container>
-      <Container className="mt-5" >
+      <Container className="mt-5" style={{ width: '20rem' }}>
         <Card bg='dark'>
           <Card.Body>
             {" "}

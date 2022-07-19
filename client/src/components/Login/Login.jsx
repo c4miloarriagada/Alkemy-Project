@@ -68,11 +68,11 @@ export const Login=()=>{
 
     return (
       <div className="background ">
-        <h1 className="text-center font-weight-bold  display-3">
+        <h1 className="text-center h1Landing display-4">
           Login
         </h1>
         <Container className="mt-5 d-flex justify-content-md-center">
-          <Container  className="mt-5 " style={{ width: '25rem' }}>
+          <Container  className="mt-5 " style={{ width: '20rem' }}>
           <Card className="mt-5" bg='dark' >
           <Card.Body>
           <Form onSubmit= { handleLogin }>  
@@ -87,8 +87,8 @@ export const Login=()=>{
         
           </Form.Group>
         
-        <Button variant="success" type="submit">
-          Success
+        <Button variant="success" type="submit" className="float-right">
+          Submit
         </Button>
         </Form>
           </Card.Body>

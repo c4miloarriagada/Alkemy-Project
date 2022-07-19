@@ -54,8 +54,8 @@ export const Register = () => {
 
   return (
     <div className="background">
-      <h1 className="text-center display-3 font-weight-bold">Register</h1>
-      <Container className="mt-5 d-flex justify-content-md-center " style={{ width: '25rem' }}>
+      <h1 className="text-center display-4 h1Landing">Register</h1>
+      <Container className="mt-5 d-flex justify-content-md-center " style={{ width: '20rem' }}>
       <Container className="mt-5">
         <Card className="mt-5" bg='dark'>
           <Card.Body>

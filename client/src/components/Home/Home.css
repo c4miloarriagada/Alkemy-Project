@@ -1,10 +1,35 @@
-.backgroundColor{
+.backgroundColor {
+  font-family: "Raleway";
+  height: 100vh !important;
+  background: rgb(103, 103, 103);
+  background: linear-gradient(
+    0deg,
+    rgba(103, 103, 103, 1) 0%,
+    rgba(240, 240, 240, 1) 100%
+  );
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  background-position: center center;
+}
 
-    font-family: 'Raleway';
+@media only screen and (min-width: 768px) and (max-width: 959px) {
+  .Container {
     height: 100vh !important;
-    background: rgb(210,210,210);
-    background: linear-gradient(0deg, rgba(210,210,210,1) 0%, rgba(252,243,224,1) 100%);
-    background-attachment: fixed;
-    background-repeat: no-repeat;
-    background-position: center center;
   }
+}
+.h1 {
+  text-shadow: 2px 0 0 rgb(25, 24, 24), -2px 0 0 rgb(25, 24, 24),
+    0 2px 0 rgb(25, 24, 24), 0 -2px 0 rgb(25, 24, 24), 1px 1px rgb(25, 24, 24),
+    -1px -1px 0 rgb(25, 24, 24), 1px -1px 0 rgb(25, 24, 24),
+    -1px 1px 0 rgb(25, 24, 24);
+  margin-top: 5px;
+  letter-spacing: 1px;
+}
+
+.h1Landing {
+  text-shadow: 2px 0 0 rgb(25, 24, 24), -2px 0 0 rgb(25, 24, 24),
+    0 2px 0 rgb(25, 24, 24), 0 -2px 0 rgb(25, 24, 24), 1px 1px rgb(25, 24, 24),
+    -1px -1px 0 rgb(25, 24, 24), 1px -1px 0 rgb(25, 24, 24),
+    -1px 1px 0 rgb(25, 24, 24);
+  letter-spacing: 1px;
+}

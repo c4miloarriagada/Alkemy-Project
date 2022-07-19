@@ -79,10 +79,10 @@ export const AddRegister = () => {
   return (
     <div className="background">
       <NavBar />
-      <h1 className="mt-5 text-center font-weight-bold">Add Register 💵</h1>
+      <h1 className="mt-5 text-center h1">Add Register 💵</h1>
       <Container>
-        <Container className="mt-5">
-          <Card bg="dark">
+        <Container className="mt-5" style={{ width: '20rem' }}>
+          <Card bg="dark" >
             <Card.Body>
               <Form onSubmit={handleSubmit}>
                 <Form>
@@ -92,6 +92,7 @@ export const AddRegister = () => {
                   >
                     <Form.Label className="text-white">Name</Form.Label>
                     <Form.Control
+                      autoComplete="off"
                       type="text"
                       placeholder="Name of register"
                       name="name"
@@ -175,7 +176,7 @@ export const AddRegister = () => {
                   variant="success"
                   type="submit"
                 >
-                  Success
+                  Submit
                 </Button>
               </Form>
             </Card.Body>

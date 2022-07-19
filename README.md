@@ -1,10 +1,35 @@
 # Alkemy-Project
 
 ```
-Project for Alkemy.org.
+FullStack Project for <a  href='https://www.alkemy.org/' target="_blank">Alkemy.org</a>
 
 
 ```
+<h1 align='center'>Management Finance Aplication 💰 </h1>
+<p>Back End  --- APIRESTFUL built on TypeScript, Node JS , Express JS, Postgres , JWT  </p>
+<p>Front End --- <a href='https://vitejs.dev/' target='_blank'> Vite JS </a> React, Redux, React Bootstrap</p>
+  <p align='center'>
+      <img align="center" src="https://res.cloudinary.com/dwtkwakbc/image/upload/v1658266533/Alkemy-project/landingFinance_unvbpl.png"/>
+</p>
+<p align='center'>
+      <img align="center" src="https://res.cloudinary.com/dwtkwakbc/image/upload/v1658266533/Alkemy-project/registerFinance_dujpfo.png"/>
+</p>
+<p align='center'>
+      <img align="center" src="https://res.cloudinary.com/dwtkwakbc/image/upload/v1658266533/Alkemy-project/homeFinance_jid6yi.png"/>
+</p>
+
+<p align='center'>
+      <img align="center" src='https://res.cloudinary.com/dwtkwakbc/image/upload/v1658266533/Alkemy-project/homeFill_b5fdma.png'/>
+</p>
+<p align='center'>
+      <img align="center" src="https://res.cloudinary.com/dwtkwakbc/image/upload/v1658266533/Alkemy-project/addRegisterFinance_cltqbn.png"/>
+</p>
+<p align='center'>
+      <img align="center" src="https://res.cloudinary.com/dwtkwakbc/image/upload/v1658266533/Alkemy-project/ediRegisterFinance_r5rpzi.png"/>
+
+  
+
+
 <table align="center" style="background-color:#FFFFFF">
 <tr style="background-color:#FFFFFF">
 <th><h2>⚙Built with </h2></th>
