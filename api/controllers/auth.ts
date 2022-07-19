@@ -11,7 +11,12 @@ export const loginController = async(req:Request, res:Response ) =>{
     const { email , password } = req.body
 
     try{
-        const user = await User.findOne({ email });
+        const user = await User.findOne({
+            where:{
+                email: email
+            }
+        } );
+      
         if(!user){
             return res.status(400).json('Email is invalid')
         }

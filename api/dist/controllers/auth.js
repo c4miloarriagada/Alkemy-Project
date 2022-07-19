@@ -19,7 +19,11 @@ const jwtgenerator_1 = require("../helpers/jwtgenerator");
 const loginController = (req, res) => __awaiter(void 0, void 0, void 0, function* () {
     const { email, password } = req.body;
     try {
-        const user = yield user_1.default.findOne({ email });
+        const user = yield user_1.default.findOne({
+            where: {
+                email: email
+            }
+        });
         if (!user) {
             return res.status(400).json('Email is invalid');
         }

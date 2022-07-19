@@ -59,6 +59,9 @@ export const Home = () => {
     });
   };
 
+  console.log(registers)
+
+
   return (
     <div className="text-center">
       <NavBar />

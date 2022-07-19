@@ -141,7 +141,7 @@ export const EditRegister = () => {
               </Form.Select>
               <br />
               <Button className="float-right" variant="success" type="submit">
-                Success
+                Submit
               </Button>
             </Form>
           </Card.Body>
