@@ -14,7 +14,7 @@ export const loginController = async(req:Request, res:Response ) =>{
         const user = await User.findOne({
             where:{
                 email: email
-            }
+            } 
         } );
       
         if(!user){
