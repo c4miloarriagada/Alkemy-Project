@@ -1,12 +1,11 @@
-# Alkemy-Project
+# Alkemy-Project-FullStack JS
 
 ```
-FullStack Project for Alkemy.org
+FullStack Project for www.alkemy.org
 
 
 ```
 <h1 align='center'>Management Finance Aplication 💰 </h1>
-<p align='center' ><a href='https://www.alkemy.org/' target="_blank">Alkemy.org</a></p>
 <p>Back End  --- APIRESTFUL built on TypeScript, Node JS , Express JS, Postgres , JWT  </p>
 <p>Front End --- <a href='https://vitejs.dev/' target='_blank'> Vite JS </a> React, Redux, React Bootstrap</p>
   <p align='center'>
