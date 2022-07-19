@@ -18,7 +18,7 @@ class Server {
         login: '/api/login',
         finance: '/api/finance'
     }
-
+ 
     constructor(){
         this.app = express();
 

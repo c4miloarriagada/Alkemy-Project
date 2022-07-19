@@ -33,4 +33,4 @@ const Finance = db.define('finances',{
 
 });
 
-export default Finance;
+export default Finance; 

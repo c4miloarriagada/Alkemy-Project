@@ -71,7 +71,7 @@ export const postFinance = async(req: Request, res: Response) => {
 
     
     const { name, type , date ,total , description, id } = req.body
-    
+     
     try{
         const finance =  await Finance.create({ name, type, total, date ,description })
         
