@@ -10,15 +10,14 @@ FullStack Project for Alkemy.org
 <p>Back End  --- APIRESTFUL built on TypeScript, Node JS , Express JS, Postgres , JWT  </p>
 <p>Front End --- <a href='https://vitejs.dev/' target='_blank'> Vite JS </a> React, Redux, React Bootstrap</p>
   <p align='center'>
-      <img align="center" src="https://res.cloudinary.com/dwtkwakbc/image/upload/v1658268330/Alkemy-project/landingFinance_unvbpl.png"/>
+      <img align="center" src="https://res.cloudinary.com/dwtkwakbc/image/upload/v1658269309/Alkemy-project/landingFinance_oufs0p.png"/>
 </p>
 <p align='center'>
-      <img align="center" src="https://res.cloudinary.com/dwtkwakbc/image/upload/v1658266533/Alkemy-project/registerFinance_dujpfo.png"/>
+      <img align="center" src="https://res.cloudinary.com/dwtkwakbc/image/upload/v1658269355/Alkemy-project/registerFinance_ol7cjk.png"/>
 </p>
 <p align='center'>
-      <img align="center" src="https://res.cloudinary.com/dwtkwakbc/image/upload/v1658266533/Alkemy-project/homeFinance_jid6yi.png"/>
+      <img align="center" src="https://res.cloudinary.com/dwtkwakbc/image/upload/v1658269371/Alkemy-project/homeFinance_eygva1.png"/>
 </p>
-
 <p align='center'>
       <img align="center" src='https://res.cloudinary.com/dwtkwakbc/image/upload/v1658268165/Alkemy-project/homeFill_b5fdma.png'/>
 </p>
@@ -26,11 +25,9 @@ FullStack Project for Alkemy.org
       <img align="center" src="https://res.cloudinary.com/dwtkwakbc/image/upload/v1658268283/Alkemy-project/addRegisterFinance_cltqbn.png"/>
 </p>
 <p align='center'>
-      <img align="center" src='https://res.cloudinary.com/dwtkwakbc/image/upload/v1658266533/Alkemy-project/ediRegisterFinance_r5rpzi.png'/></p>
+      <img align="center" src='https://res.cloudinary.com/dwtkwakbc/image/upload/v1658266533/Alkemy-project/ediRegisterFinance_r5rpzi.png'/>
+</p>
       
-
-  
-
 
 <table align="center" style="background-color:#FFFFFF">
 <tr style="background-color:#FFFFFF">
