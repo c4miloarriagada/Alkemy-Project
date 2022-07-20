@@ -1,6 +1,4 @@
 import { Sequelize }  from'sequelize'
-import User from '../models/user';
-import Finance from '../models/finance';
 require('dotenv').config();
 
 const DB_PASSWORD:any = process.env.DB_PASSWORD

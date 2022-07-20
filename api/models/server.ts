@@ -1,6 +1,5 @@
 import express, { Application } from 'express';
 import cors from 'cors'
-
 import userRoutes from '../routes/users'
 import login from '../routes/login'
 import financeRoutes from '../routes/finance'

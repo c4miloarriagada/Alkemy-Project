@@ -1,9 +1,9 @@
-import { DataTypes } from 'sequelize'
+import { DataTypes,   } from 'sequelize'
 import db from '../database/connection';
 
 
 
-const User = db.define('users',{
+const User:any  =  db.define('users',{
 
     name: {
         type: DataTypes.STRING,

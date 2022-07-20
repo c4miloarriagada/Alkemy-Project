@@ -1,3 +1,4 @@
+import { Request, Response } from "express";
 import { NextFunction } from "express";
 import { validationResult } from "express-validator";
 
