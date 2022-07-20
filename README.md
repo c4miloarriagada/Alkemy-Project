@@ -3,6 +3,10 @@
 ```
 FullStack Project for www.alkemy.org
 
+How to start?
+
+api : $ nodemon ./dist/app
+client: $ npm run dev
 
 ```
 <h1 align='center'>Management Finance Aplication 💰 </h1>
