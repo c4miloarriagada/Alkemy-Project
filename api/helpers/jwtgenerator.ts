@@ -4,14 +4,12 @@ import jwt from 'jsonwebtoken'
 
 export const jwtGenerator = (id = '') => {
 
-    const SECRET_PRIVATE_KEY:any = process.env.SECRETORPRIVATEKEY
-
     return new Promise((resolve, rejects)=>{
         const payload = { id };
 
         jwt.sign(
             payload,
-            SECRET_PRIVATE_KEY,
+            'Th1S1SMyS3CR37k3Y',
             {
                 expiresIn: '368d',
             } ,

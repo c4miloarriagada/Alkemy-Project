@@ -17,12 +17,11 @@ const jsonwebtoken_1 = __importDefault(require("jsonwebtoken"));
 const user_1 = __importDefault(require("../models/user"));
 const jwtValidator = (req, res, next) => __awaiter(void 0, void 0, void 0, function* () {
     const token = req.header('x-token');
-    const SECRET_PRIVATE_KEY = process.env.SECRETORPRIVATEKEY;
     if (!token) {
         return res.status(401).json('Token is required');
     }
     try {
-        const { id } = jsonwebtoken_1.default.verify(token, SECRET_PRIVATE_KEY);
+        const { id } = jsonwebtoken_1.default.verify(token, 'Th1S1SMyS3CR37k3Y');
         const user = yield user_1.default.findByPk(id);
         if (!user) {
             return res.status(401).json('User doesnt exist');

@@ -11,15 +11,13 @@ export const jwtValidator = async(req:MyUserRequest, res:Response, next:NextFunc
  
     const token = req.header('x-token');
 
-    const SECRET_PRIVATE_KEY:any = process.env.SECRETORPRIVATEKEY
-    
 
     if(!token){
         return res.status(401).json('Token is required')
     }
 
     try{
-        const { id }:any = jwt.verify(token, SECRET_PRIVATE_KEY);
+        const { id }:any = jwt.verify(token, 'Th1S1SMyS3CR37k3Y');
         const user = await User.findByPk(id);
         
     if(!user){

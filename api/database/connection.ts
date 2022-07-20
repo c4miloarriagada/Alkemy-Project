@@ -1,11 +1,9 @@
 import { Sequelize }  from'sequelize'
-require('dotenv').config();
 
-const DB_PASSWORD:any = process.env.DB_PASSWORD
-const DB_USER:any = process.env.DB_USER
-const DB_NAME:any= process.env.DB_NAME
 
-const db = new Sequelize(DB_NAME , DB_USER, DB_PASSWORD,{
+
+
+const db = new Sequelize('alkemy-project' , 'postgres', '1234',{
     host: 'localhost',
     dialect: 'postgres',
     native: false
