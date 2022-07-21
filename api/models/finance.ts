@@ -11,7 +11,7 @@ const Finance = db.define('finances',{
     },
     type: {
         type: DataTypes.ENUM({
-            values: ['sum' , 'rest']
+            values: ['sum' , 'sub']
         }),
        
     },

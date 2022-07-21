@@ -161,7 +161,7 @@ export const AddRegister = () => {
                 >
                   <option>Type</option>
                   <option value={"sum"}>Deposited 💰</option>
-                  <option value={"rest"}>Withdraw 💸</option>
+                  <option value={"sub"}>Withdraw 💸</option>
                 </Form.Select>
                 <br />
                 {error.type && (

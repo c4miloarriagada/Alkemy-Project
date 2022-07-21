@@ -12,7 +12,7 @@ const Finance = connection_1.default.define('finances', {
     },
     type: {
         type: sequelize_1.DataTypes.ENUM({
-            values: ['sum', 'rest']
+            values: ['sum', 'sub']
         }),
     },
     total: {

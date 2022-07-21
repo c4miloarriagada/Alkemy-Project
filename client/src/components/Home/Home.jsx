@@ -17,8 +17,8 @@ export const Home = () => {
     ?.filter((e) => e.type === "sum")
     .map((e) => e.total)
     .reduce((acc, el) => acc + el, 0);
-  const totalRest = registers
-    ?.filter((e) => e.type === "rest")
+  const totalSub = registers
+    ?.filter((e) => e.type === "sub")
     .map((e) => e.total)
     .reduce((acc, el) => acc + el, 0);
   const sum = registers
@@ -26,9 +26,9 @@ export const Home = () => {
     .filter((e) => e.type === "sum")
     .map((e) => e.total)
     .reduce((acc, el) => acc + el, 0);
-  const rest = registers
+  const sub = registers
     ?.slice(0, 10)
-    .filter((e) => e.type === "rest")
+    .filter((e) => e.type === "sub")
     .map((e) => e.total)
     .reduce((acc, el) => acc + el, 0);
 
@@ -151,25 +151,25 @@ export const Home = () => {
           </Table>
           <Table size="md">
             <td>
-              {totalSum - totalRest < 0 ? (
+              {totalSum - totalSub < 0 ? (
                 <td class="p-2  bg-danger text-white float-right ">
-                  Historical Balance = ${totalSum - totalRest}{" "}
+                  Historical Balance = ${totalSum - totalSub}{" "}
                 </td>
               ) : (
                 <td class="p-2 bg-success text-white float-right ">
-                  Historical Balance = ${totalSum - totalRest}{" "}
+                  Historical Balance = ${totalSum - totalSub}{" "}
                 </td>
               )}{" "}
             </td>
             <br />
             <td>
-              {sum - rest < 0 ? (
+              {sum - sub < 0 ? (
                 <td class="p-2  bg-danger text-white float-right">
-                  Total Table = $ {sum - rest}
+                  Total Table = $ {sum - sub}
                 </td>
               ) : (
                 <td class="p-2  bg-success text-white float-right ">
-                  Total Table = ${sum - rest}
+                  Total Table = ${sum - sub}
                 </td>
               )}
             </td>

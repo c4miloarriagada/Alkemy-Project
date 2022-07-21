@@ -137,7 +137,7 @@ export const EditRegister = () => {
               >
                 <option>Type</option>
                 <option value={"sum"}>Deposited 💰</option>
-                <option value={"rest"}>Withdraw 💸</option>
+                <option value={"sub"}>Withdraw 💸</option>
               </Form.Select>
               <br />
               <Button className="float-right" variant="success" type="submit">
