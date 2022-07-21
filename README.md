@@ -3,7 +3,8 @@
 ```
 FullStack Project for www.alkemy.org
 
-How to start?
+
+For start
 
 npm install
 # or
