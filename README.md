@@ -14,7 +14,7 @@ yarn install
 /client: $ npm run dev
 
 ```
-<h1 align='center'>Management Finance Aplication 💰 </h1>
+<h1 align='center'>Management Finance Application 💰 </h1>
 <p>Back End  --- APIRESTFUL built on TypeScript, Node JS , Express JS, Postgres , JWT  </p>
 <p>Front End --- <a href='https://vitejs.dev/' target='_blank'> Vite JS </a> React, Redux, React Bootstrap</p>
   <p align='center'>
